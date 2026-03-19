@@ -1,12 +1,14 @@
 # DexSkin Interfacing Setup Guide
 
 This guide explains:
-- How to flash the DexSkin finger firmware
-- How to use the board readout and visualization scripts
+- [Flashing DexSkin firmware](#firmware-setup)
+- [Using readout and visualization scripts](#readout--visualization-setup)
 
 Compatible with **Windows, macOS, and Linux**
 
 ---
+## Firmware Setup
+<a name="firmware-setup"></a>
 
 ## 1. Install FTDI Drivers
 
@@ -86,3 +88,77 @@ When the terminal displays
 the firmware update is complete.
 
 You may need to press the **Reset** button once more to cleanly power cycle and boot up the system.
+
+---
+
+## Readout & Visualization Setup
+<a name="readout--visualization-setup"></a>
+
+### Python Dependencies
+
+We provide two Python scripts for interfacing and visualization.  
+Tested with Python 3.10 (Python ≥ 3.8 supported).
+
+**Required packages:**
+- PyQt5 (5.15.11)
+- pyqtgraph (0.13.7)
+- pyserial (3.5)
+- numpy (2.0.2)
+
+**Setup (conda example):**
+
+    conda create -n dexskin_env python=3.10 -y
+    conda activate dexskin_env
+    pip install PyQt5==5.15.11 pyqtgraph==0.13.7 pyserial==3.5 numpy==2.0.2
+
+---
+
+### Script Overview
+
+Two processes communicate via shared memory:
+
+- Readout script (high priority, data collection)
+- Visualization script (display only)
+
+---
+
+### Script 1: Readout
+
+Handles:
+- serial communication  
+- packet decoding  
+- baseline normalization  
+
+**Must be running first.**
+
+---
+
+### Script 2: Visualization
+
+Provides real-time display:
+- one dot per taxel  
+- dot size ∝ pressure  
+
+---
+
+### Developer: Shared Memory Access
+
+Attach to shared memory:
+
+    SHM_NAME = 'dexskin_memory'
+    NUM_TAXELS = 120
+
+    try:
+        self.shm = shm.SharedMemory(name=SHM_NAME)
+        self.frame_buffer = np.ndarray((NUM_TAXELS,), dtype=np.float32, buffer=self.shm.buf)
+        print(f"Attached to shared memory: {SHM_NAME}")
+    except FileNotFoundError:
+        print(f"ERROR: Shared memory block '{SHM_NAME}' not found.")
+        print("Please ensure the data providing script is running.")
+        sys.exit(1)
+
+Use:
+
+    self.frame_buffer.copy()
+
+to access latest data.
