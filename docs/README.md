@@ -10,7 +10,7 @@ Compatible with **Windows, macOS, and Linux**
 ## Firmware Setup
 <a name="firmware-setup"></a>
 
-## 1. Install FTDI Drivers
+### 1. Install FTDI Drivers
 
 If you haven’t worked with embedded systems before, you will need a driver to communicate with the onboard Serial USB. Please visit and install the USB serial drivers:
 
@@ -21,7 +21,7 @@ https://ftdichip.com/drivers/vcp-drivers/
 
 ---
 
-## 2. Install Flashing Tool (esptool)
+### 2. Install Flashing Tool (esptool)
 
 The esptool utility is a universal Python-based application used to communicate and flash in firmware with the ESP32 MCU series.
 
@@ -29,7 +29,7 @@ The esptool utility is a universal Python-based application used to communicate 
 
 ---
 
-## 3. Identify Serial Port
+### 3. Identify Serial Port
 
 Connect the board via USB-C.
 
@@ -51,7 +51,7 @@ Right-click the Start menu, select Device Manager, and expand Ports (COM & LPT).
 
 ---
 
-## 4. Flash Firmware
+### 4. Flash Firmware
 
 Download the provided `firmware/dexskin_finger_firmware.bin` file. Navigate to the firmware directory and run:
 
@@ -65,7 +65,7 @@ Replace `PORT` with your device found in Step #3.
 
 ---
 
-## 5. Troubleshooting
+### 5. Troubleshooting
 
 **Automatic Boot:**  
 The board should enter flashing mode automatically once the flash command is executed.
@@ -79,7 +79,7 @@ The board should enter flashing mode automatically once the flash command is exe
 
 ---
 
-## 6. Completion
+### 6. Completion
 
 When the terminal displays
 
@@ -91,12 +91,12 @@ You may need to press the **Reset** button once more to cleanly power cycle and 
 
 ---
 
-## Readout & Visualization Setup
+## Board Readout & Visualization Scripts
 <a name="readout--visualization-setup"></a>
 
 ### Python Dependencies
 
-We provide two Python scripts for interfacing and visualization.  
+We provide two Python scripts for interfacing and visualization DexSkin sensor readings.  
 Tested with Python 3.10 (Python ≥ 3.8 supported).
 
 **Required packages:**
@@ -105,7 +105,7 @@ Tested with Python 3.10 (Python ≥ 3.8 supported).
 - pyserial (3.5)
 - numpy (2.0.2)
 
-**Setup (conda example):**
+**Quick Setup (conda example):**
 
     conda create -n dexskin_env python=3.10 -y
     conda activate dexskin_env
@@ -115,29 +115,25 @@ Tested with Python 3.10 (Python ≥ 3.8 supported).
 
 ### Script Overview
 
-Two processes communicate via shared memory:
+The software architecture is split into two independent processes that communicate via shared memory. This allows the readout script to run at high priority for data logging, while the visualization script consumes data for display without slowing down sensor sampling.
 
-- Readout script (high priority, data collection)
-- Visualization script (display only)
 
----
+### Script 1: DexSkin_Readout.py
 
-### Script 1: Readout
-
-Handles:
+This script acts as the driver and handles:
 - serial communication  
 - packet decoding  
 - baseline normalization  
 
-**Must be running first.**
+It must be started first and remain running, as all other applications (including visualization) depend on it for accessing sensor data.
 
----
 
-### Script 2: Visualization
+### Script 2: Visualization_120taxels_pcap_dot_dual.py
 
-Provides real-time display:
-- one dot per taxel  
-- dot size ∝ pressure  
+This script provides a real-time visual representation of tactile data for both the left and right fingers.
+
+- Each taxel is displayed as a white dot  
+- Dot size is proportional to the raw sensor values (sampled pressure / force magnitude)
 
 ---
 
