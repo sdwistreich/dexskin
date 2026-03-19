@@ -1,11 +1,7 @@
 # DexSkin (CoRL 2025)
 
-<p align="center">
-Suzannah Wistreich*, Baiyu Shi*, Stephen Tian*, <br> Samuel Clarke, Michael Nath, Chengyi Xu, Zhenan Bao, Jiajun Wu<br>
-(* equal contribution)<br><br>
-Stanford University, UAB<br>
-Conference on Robot Learning (CoRL), 2025
-</p>
+*Suzannah Wistreich*, *Baiyu Shi*, *Stephen Tian*, Samuel Clarke, Michael Nath, Chengyi Xu, Zhenan Bao, Jiajun Wu  
+Stanford University, UAB · CoRL 2025  
 
 🔗 Project page: https://dex-skin.github.io
 
