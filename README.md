@@ -26,11 +26,17 @@ DexSkin is a soft, high-resolution, conformable tactile sensing system designed 
 ## Repository Overview
 
 ```
-hardware/        # Sensor design (electrodes, fPCB, calibration rigs)
-firmware/        # ESP32 firmware + flashing binaries
+hardware/
+  ├── finger/          # Electrode design + finger assembly
+  ├── fpcb/            # Flexible PCB interconnects
+  ├── calibration/     # Pneumatic calibration setup (STLs)
+  └── readout_pcb/     # Readout board (Gerbers)
+
+firmware/              # ESP32 firmware + flashing binaries
+
 scripts/
-  ├── interface/   # Readout + visualization
-  └── learning/    # Integration with ML / RL pipelines
+  ├── interface/       # Readout + visualization
+  └── learning/        # Integration with ML / RL pipelines
 ```
 ---
 
