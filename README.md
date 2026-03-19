@@ -1,6 +1,6 @@
 # DexSkin (CoRL 2025)
 
-*Suzannah Wistreich*, *Baiyu Shi*, *Stephen Tian*, Samuel Clarke, Michael Nath, Chengyi Xu, Zhenan Bao, Jiajun Wu  
+Suzannah Wistreich*, Baiyu Shi*, Stephen Tian*, Samuel Clarke, Michael Nath, Chengyi Xu, Zhenan Bao, Jiajun Wu  
 Stanford University, UAB · CoRL 2025  
 
 🔗 Project page: https://dex-skin.github.io
