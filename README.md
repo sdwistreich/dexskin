@@ -70,21 +70,18 @@ https://sdwistreich.github.io/dexskin/
 
 ---
 
-## Citation
+## BibTeX
 
+If you found this open-source helpful, please consider citing:
 ```
 @inproceedings{wistreich2025dexskin,
     title={DexSkin: High-Coverage Conformable Robotic Skin for Learning Contact-Rich Manipulation},
-    author={Wistreich, Suzannah and Shi, Baiyu and Tian, Stephen and Clarke, Samuel and Nath, Michael and Xu, Chengyi and Bao, Zhenan and Wu, Jiajun},
+    author={Suzannah Wistreich and Baiyu Shi and Stephen Tian and Samuel Clarke and Michael Nath and Chengyi Xu and Zhenan Bao and Jiajun Wu},
     booktitle={Conference on Robot Learning (CoRL)},
-    year={2025}
+    year={2025},
+    eprint={2509.18830},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO},
+    url={https://arxiv.org/abs/2509.18830},
 }
 ```
-
----
-
-## Contact
-
-suzannah@stanford.edu  
-baiyushi@stanford.edu  
-stephentian@stanford.edu  
