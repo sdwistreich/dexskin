@@ -1,6 +1,5 @@
 # DexSkin (CoRL 2025)
 
-**Authors:**  
 Suzannah Wistreich*, Baiyu Shi*, Stephen Tian*, Samuel Clarke, Michael Nath, Chengyi Xu, Zhenan Bao, Jiajun Wu  
 (* equal contribution)  
 
