@@ -1,4 +1,4 @@
-# File name: Visualization_120taxels_pcap_dot_dual.py
+# File name: visualize.py
 # Author: Baiyu Shi
 # Date last modified: 01/09/2025
 

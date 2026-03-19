@@ -1,4 +1,4 @@
-# File name: DexSkin_Readout.py
+# File name: readout.py
 # Author: Baiyu Shi
 # Date created: Jan.2025
 # Version: v1.3
