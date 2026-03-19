@@ -118,28 +118,20 @@ Tested with Python 3.10 (Python ≥ 3.8 supported).
 The software architecture is split into two independent processes that communicate via shared memory. This allows the readout script to run at high priority for data logging, while the visualization script consumes data for display without slowing down sensor sampling.
 
 
-### Script 1: DexSkin_Readout.py
-
-This script acts as the driver and handles:
-- serial communication  
-- packet decoding  
-- baseline normalization  
-
-It must be started first and remain running, as all other applications (including visualization) depend on it for accessing sensor data.
+- **scripts/interface/readout.py**: Handles serial communication, packet decoding, and baseline normalization. **Always run this script first**, it must be running for the visualization or any other application to access sensor data.
 
 
-### Script 2: Visualization_120taxels_pcap_dot_dual.py
 
-This script provides a real-time visual representation of tactile data for both the left and right fingers.
-
-- Each taxel is displayed as a white dot  
-- Dot size is proportional to the raw sensor values (sampled pressure / force magnitude)
+- **scripts/interface/visualize.py**: Provides a real-time visualization of tactile data for both the left and right fingers. Each taxel is displayed as a white dot, with dot size proportional to the raw sensor values (sampled pressure / force magnitude).
 
 ---
 
-### Developer: Shared Memory Access
+### Developer Guide: Interfacing with Shared Memory
 
-Attach to shared memory:
+The DexSkin system exposes its real-time data buffer to the operating system’s shared memory. This allows developers to write their own scripts (e.g., for Machine Learning inference, ROS robot control, or custom logging) without modifying the core driver.
+
+Any Python script running on the same machine can attach to the shared memory block as a client:
+
 
     SHM_NAME = 'dexskin_memory'
     NUM_TAXELS = 120
@@ -153,7 +145,7 @@ Attach to shared memory:
         print("Please ensure the data providing script is running.")
         sys.exit(1)
 
-Use:
+Then in other function calls, use:
 
     self.frame_buffer.copy()
 
