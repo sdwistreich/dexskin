@@ -11,19 +11,15 @@ We are excited to release **DexSkin**! 🎊
 
 DexSkin is a soft, high-resolution, conformable tactile sensing system designed for **contact-rich robotic manipulation**. It enables dense, localized sensing across complex surfaces and supports learning-based control in real-world settings.
 
-**This repository contains the full stack needed to:**
-- fabricate the DexSkin sensor  
-- interface with readout hardware  
-- stream and visualize tactile data  
-- integrate DexSkin with downstream learning pipelines  
-
 ---
 ## Getting Started
 
-- **Fabricate the sensor** → [hardware/README.md](hardware/README.md)  
+**This repository contains the full stack needed to:**
+
+- **Fabricate the DexSkin sensor** → [hardware/README.md](hardware/README.md)  
 - **Set up + interface with the hardware** → [docs/README.md](docs/README.md)  
-- **Run readout + visualization** → [scripts/interface](scripts/interface)  
-- **Integrate with learning pipelines** → [scripts](scripts)  
+- **Stream and visualize tactile data** → [scripts/interface](scripts/interface)  
+- **Integrate DexSkin with learning pipelines** → [scripts](scripts)  
 
 ---
 
