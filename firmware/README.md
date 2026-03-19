@@ -1,8 +1,8 @@
 # DexSkin Interfacing Setup Guide
 
 This guide explains:
-- [Flashing DexSkin firmware](#firmware-setup)
-- [Using readout and visualization scripts](#readout--visualization-setup)
+- [DexSkin firmware setup](#firmware-setup)
+- [Board readout and visualization scripts](#readout--visualization-setup)
 
 Compatible with **Windows, macOS, and Linux**
 
