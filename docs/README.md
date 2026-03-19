@@ -53,7 +53,7 @@ Right-click the Start menu, select Device Manager, and expand Ports (COM & LPT).
 
 ### 4. Flash Firmware
 
-Download the provided `firmware/dexskin_finger_firmware.bin` file. Navigate to the firmware directory and run:
+Download the provided [`dexskin_finger_firmware.bin`](../firmware/dexskin_finger_firmware.bin). Navigate to the firmware directory and run:
 
     esptool --chip esp32s3 --port PORT --baud 460800 write_flash 0x0 dexskin_finger_firmware.bin
 
@@ -118,11 +118,11 @@ Tested with Python 3.10 (Python ≥ 3.8 supported).
 The software architecture is split into two independent processes that communicate via shared memory. This allows the readout script to run at high priority for data logging, while the visualization script consumes data for display without slowing down sensor sampling.
 
 
-- **scripts/interface/readout.py**: Handles serial communication, packet decoding, and baseline normalization. **Always run this script first**, it must be running for the visualization or any other application to access sensor data.
+- **[`scripts/interface/readout.py`](../scripts/interface/readout.py)**: Handles serial communication, packet decoding, and baseline normalization. **Always run this script first**, it must be running for the visualization or any other application to access sensor data.
 
 
 
-- **scripts/interface/visualize.py**: Provides a real-time visualization of tactile data for both the left and right fingers. Each taxel is displayed as a white dot, with dot size proportional to the raw sensor values (sampled pressure / force magnitude).
+- **[`scripts/interface/visualize.py`](../scripts/interface/visualize.py)**: Provides a real-time visualization of tactile data for both the left and right fingers. Each taxel is displayed as a white dot, with dot size proportional to the raw sensor values (sampled pressure / force magnitude).
 
 ---
 
