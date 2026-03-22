@@ -34,8 +34,9 @@ hardware/
   ├── calibration/     # pneumatic calibration setup (STLs)
   └── readout_pcb/     # readout board Gerbers
 
-firmware/              # ESP32 firmware, flashing binaries
-  └── scripts/         # readout and visualization scripts
+firmware/    
+  ├── dexskin_finger_firmware.bin       # ESP32 flashing binaries
+  └── scripts/                          # readout and visualization scripts
 
 learning/
   └── scripts/        # RL integration example
