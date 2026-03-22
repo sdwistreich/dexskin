@@ -124,9 +124,7 @@ The software architecture is split into two independent processes that communica
 
 - **[`./scripts/visualize.py`](./scripts/visualize.py)**: Provides a real-time visualization of tactile data for both the left and right fingers. Each taxel is displayed as a white dot, with dot size proportional to the raw sensor values (sampled pressure / force magnitude). If the script is running correctly, the visualization will look like:
 
-<div style="text-align:center;">
-  <img src="assets/white_dot.gif" style="width:50%; border-radius:10px;" />
-</div>
+![DexSkin Demo](../assets/white_dot.gif)
 
 ---
 
