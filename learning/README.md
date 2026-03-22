@@ -36,9 +36,11 @@ These scripts are provided as a **helpful reference implementation**. In particu
 
 - **[`./scripts/franka_env_with_policy.py`](./scripts/franka_env_with_policy.py)**: Defines a Gym-compatible Franka environment that combines a pretrained diffusion policy with a residual controller. The residual action modifies the base policy's gripper action online, where DexSkin signals are used to compute force-threshold rewards together with an action-magnitude penalty.
 
-- **[`./scripts/residual_inference_train_env.py`](./scripts/residual_inference_train_env.py)**: Runs Franka rollouts with the base policy plus a residual controller, which is one of:
-  - a learned residual policy,
-  - the base policy only, or
-  - a random residual baseline.  
+- **[`./scripts/residual_inference_train_env.py`](./scripts/residual_inference_train_env.py)**: Constructs a `FrankaEnvWithPolicy` environment (from `franka_env_with_policy.py`) and runs Franka rollouts with the base policy plus a residual controller, which is one of:
+  - (default) a learned residual policy
+  - `--base_policy_only`: the base policy only
+  - `--random_residual`: a random residual baseline  
 
-- **[`./scripts/residual_train.py`](./scripts/residual_train.py)**: Trains a residual SAC policy online on the Franka robot. This script loads the pretrained base policy, constructs the DexSkin-enabled environment, performs online rollouts, updates the residual policy, and periodically saves checkpoints.
+If neither `--base_policy_only` nor `--random_residual` is set, this script can also continue updating the learned residual policy online.
+
+- **[`./scripts/residual_train.py`](./scripts/residual_train.py)**: Trains a residual SAC policy online on the Franka robot. This script loads the pretrained base policy, constructs the DexSkin-enabled environment (`FrankaEnvWithPolicy` from `franka_env_with_policy.py`), performs online rollouts, updates the residual policy, and periodically saves checkpoints.
