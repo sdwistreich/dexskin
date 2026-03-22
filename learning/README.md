@@ -28,9 +28,7 @@ We train a base manipulation policy using a standard **diffusion policy** formul
 ## RL Fine-Tuning with DexSkin
 <a name="rl-fine-tuning-with-dexskin"></a>
 
-We provide a small set of **example residual RL scripts** to illustrate how DexSkin can be used in real-world, online learning settings.
-
-These scripts are provided as a **helpful reference implementation**. In particular, reward functions, force thresholds, termination conditions, etc. should be adapted to one's own target task and hardware setup.
+We provide a small set of **example residual RL scripts** to illustrate how DexSkin can be used in real-world, online learning settings. These scripts are provided as a helpful reference implementation. In particular, reward functions, force thresholds, termination conditions, etc. should be adapted to one's own target task and hardware setup.
 
 ### Script Overview
 
@@ -43,4 +41,4 @@ These scripts are provided as a **helpful reference implementation**. In particu
 
 If neither `--base_policy_only` nor `--random_residual` is set, this script can also continue updating the learned residual policy online.
 
-- **[`./scripts/residual_train.py`](./scripts/residual_train.py)**: Trains a residual SAC policy online on the Franka robot. This script loads the pretrained base policy, constructs the DexSkin-enabled environment (`FrankaEnvWithPolicy` from `franka_env_with_policy.py`), performs online rollouts, updates the residual policy, and periodically saves checkpoints.
+- **[`./scripts/residual_train.py`](./scripts/residual_train.py)**: Trains a residual SAC policy online on the Franka robot. This script loads the pretrained base policy, constructs the DexSkin-enabled `FrankaEnvWithPolicy` environment, performs online rollouts, updates the residual policy, and periodically saves checkpoints.
