@@ -118,7 +118,7 @@ Tested with Python 3.10 (Python ≥ 3.8 supported).
 The software architecture is split into two independent processes that communicate via shared memory. This allows the readout script to run at high priority for data logging, while the visualization script consumes data for display without slowing down sensor sampling.
 
 
-- **[`./scripts/readout.py`](./interface/readout.py)**: Handles serial communication, packet decoding, and baseline normalization. **Always run this script first**, it must be running for the visualization or any other application to access sensor data.
+- **[`./scripts/readout.py`](./scripts/readout.py)**: Handles serial communication, packet decoding, and baseline normalization. **Always run this script first**, it must be running for the visualization or any other application to access sensor data.
 
 
 
