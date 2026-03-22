@@ -40,7 +40,7 @@ These scripts are provided as a **helpful reference implementation**. In particu
   - the base policy only, or
   - a random residual baseline.  
 
-- **[`learning/scripts/residual_train.py`](./scripts/residual_train.py)**: Trains a residual SAC policy online on the Franka robot. This script loads the pretrained base policy, constructs the DexSkin-enabled environment, performs online rollouts, updates the residual policy, and periodically saves checkpoints.
+- **[`./scripts/residual_train.py`](./scripts/residual_train.py)**: Trains a residual SAC policy online on the Franka robot. This script loads the pretrained base policy, constructs the DexSkin-enabled environment, performs online rollouts, updates the residual policy, and periodically saves checkpoints.
 
 
 
