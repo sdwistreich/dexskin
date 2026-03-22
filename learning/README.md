@@ -23,6 +23,7 @@ These demonstrations are used to train policies via imitation learning. In our s
 
 We train a base manipulation policy using a standard **diffusion policy** formulation, though any imitation-learning framework will do.
 
+---
 
 ## RL Fine-Tuning with DexSkin
 <a name="rl-fine-tuning-with-dexskin"></a>
@@ -35,7 +36,7 @@ These scripts are provided as a **helpful reference implementation**. In particu
 
 - **[`./scripts/franka_env_with_policy.py`](./scripts/franka_env_with_policy.py)**: Defines a Gym-compatible Franka environment that combines a pretrained diffusion policy with a residual controller. The residual action modifies the base policy's gripper action online, where DexSkin signals are used to compute force-threshold rewards.
 
-- **[`./scripts/residual_inference_train_env.py`](./scripts/residual_inference_train_env.py)**: Runs Franka rollouts with the base policy plus a residual controller:
+- **[`./scripts/residual_inference_train_env.py`](./scripts/residual_inference_train_env.py)**: Runs Franka rollouts with the base policy plus a residual controller, which is one of:
   - a learned residual policy,
   - the base policy only, or
   - a random residual baseline.  
