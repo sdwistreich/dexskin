@@ -66,14 +66,19 @@ For a full walkthrough, please see the assembly video on our project website.
 In our builds, we use a sandpaper-structured midlayer as the dielectric.
 
 **Procedure**
-1. **Prepare base layer**
-  Apply double-sided tape along the boundary of one fPCB piece.
-2. **Attach dielectric**  
-  Laminate the dielectric layer onto the second fPCB piece, trimming as needed.
-3. **Align electrodes** 
-  Carefully align the top and bottom electrode layers by matching the exposed copper taxels.
-4. ***Bond Assembly**
-   Press around the edges to ensure the double-sided tape bonds the two pieces together securely.
+1. **Prepare base layer**:
+   
+     Apply double-sided tape along the boundary of one fPCB piece.
+2. **Attach dielectric**:
+
+     Laminate the dielectric layer onto the second fPCB piece, trimming as needed.
+3. **Align electrodes**:
+
+     Carefully align the top and bottom electrode layers by matching the exposed copper taxels.
+4. ***Bond Assembly**:
+
+     Press around the edges to ensure the double-sided tape bonds the two pieces together securely.
+
 
    
 After assembly, verify the sensor by following the firmware instructions provided in [`../firmware/README.md`](../firmware/README.md). Then, run:
