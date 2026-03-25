@@ -75,7 +75,7 @@ In our builds, we use a sandpaper-structured midlayer as the dielectric.
 3. **Align electrodes**:
 
      Carefully align the top and bottom electrode layers by matching the exposed copper taxels.
-4. ***Bond Assembly**:
+4. **Bond Assembly**:
 
      Press around the edges to ensure the double-sided tape bonds the two pieces together securely.
 
