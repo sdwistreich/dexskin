@@ -55,12 +55,32 @@ Assembly overview:
 
 > Placeholder: [pending FPCB assembly GIF here]
 
-- Materials: two fabricated fPCB pieces, thin double-sided tape, a nonconductive dielectric layer, and a sharp scalpel for trimming the dielectric and tape
-- In our builds, we use a sandpaper-structured midlayer as the dielectric
-- First, apply double-sided tape around the boundary of one fPCB piece
-- Second, laminate the dielectric layer onto the other fPCB piece
-- Finally, manually align the top and bottom electrode layers by matching the exposed copper square taxels, then press around the edges to ensure the double-sided tape bonds the two pieces together securely
-- After assembly, follow [`../firmware/README.md`](../firmware/README.md) and run [`../firmware/scripts/readout.py`](../firmware/scripts/readout.py) together with [`../firmware/scripts/visualize.py`](../firmware/scripts/visualize.py) to verify that the sensor reads out correctly and view the real-time visualization
+For a full walkthrough, please see the assembly video on our project website.
+
+**Materials**
+- Two fabricated fPCB pieces
+- Thin double-sided tape
+- Nonconductive dielectric layer
+- Sharp scalpel for trimming dielectric and tape
+  
+In our builds, we use a sandpaper-structured midlayer as the dielectric.
+
+**Procedure**
+1. **Prepare base layer**
+  Apply double-sided tape along the boundary of one fPCB piece.
+2. **Attach dielectric**  
+  Laminate the dielectric layer onto the second fPCB piece, trimming as needed.
+3. **Align electrodes** 
+  Carefully align the top and bottom electrode layers by matching the exposed copper taxels.
+4. ***Bond Assembly**
+   Press around the edges to ensure the double-sided tape bonds the two pieces together securely.
+
+   
+After assembly, verify the sensor by following the firmware instructions provided in [`../firmware/README.md`](../firmware/README.md). Then, run:
+- [`../firmware/scripts/readout.py`](../firmware/scripts/readout.py)
+- [`../firmware/scripts/visualize.py`](../firmware/scripts/visualize.py)
+
+to verify that the sensor reads out correctly and view the real-time visualization
 
 > Placeholder: [pending FPCB interaction GIF here]
 
