@@ -31,27 +31,24 @@ In progress (target: mid-April 2026):
   - 2.5 mm x 2.5 mm square taxels 
   - 1.5 mm spacing between neighboring taxels
 
-  Gerber layers for the PCB fabrication included in the files:
+  Gerber layers included in the PCB fabrication files:
   
-  - "Mechanical Layer 1": PCB outline
-  - "Top Overlay": top EMI shielding film outline
-  - "Bottom Overlay": bottom stiffener outline
+  - **Mechanical Layer 1**: PCB outline
+  - **Top Overlay**: top EMI shielding film outline
+  - **Bottom Overlay**: bottom stiffener outline
 
 ### `readout_pcb/`
 
-- `dexskin_readout_pcb_v1.1.zip`
-- Manufacturing files for the 4-layer readout board used to read both finger arrays simultaneously
-- Prepared as a fabrication-ready Gerber archive
+- `dexskin_readout_pcb_v1.1.zip`: Manufacturing files for the 4-layer readout board used to read both finger arrays simultaneously, prepared as a fabrication-ready Gerber archive
 
 ### `calibration/`
 
-- `Final_Mold_Top.stl`
-- `Final_Mold_Bot.stl`
-- `Final_Mold_Supporting_Platform.stl`
+- `Final_Mold_Top.stl` 
+- `Final_Mold_Bot.stl` 
+- `Final_Mold_Supporting_Platform.stl` 
 - `D20.8_Inner_Sleeve_TOP.stl`
 - `D20.8_Inner_Sleeve_BOT.stl`
-- 3D-printable parts for molding Ecoflex and building airtight calibration chambers
-- Used for the 3-minute transfer calibration procedure described in the paper across sensor instances from different fabrication batches
+    - 3D-printable parts used to mold the Ecoflex and build airtight chambers for the 3-minute transfer calibration procedure described in the paper.
 
 ## Assembly Guide
 Assembly overview:
