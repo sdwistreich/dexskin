@@ -1,6 +1,6 @@
 # Hardware
 
-This folder contains the released DexSkin hardware assets for fabricating the tactile sensor, ordering the supporting PCBs, and reproducing the calibration fixtures described in the paper.
+This folder contains DexSkin hardware assets for fabricating the sensor, ordering the PCBs, and reproducing the calibration setup described in the paper.
 
 ## Release Status
 
@@ -11,28 +11,25 @@ Currently available in this folder:
 - Readout PCB Gerbers
 - Calibration fixture STLs
 
-Still in progress (target: mid-April 2026):
+In progress (target: mid-April 2026):
 
 - Readout board BOM
-- Calibration fabrication guide and per-part notes
+- Calibration fabrication guide
 - Assembly and ordering recommendations
 
 ## Folder Guide
 
 ### `finger/`
 
-- `DexSkin_Electrode_design.svg`
-- SVG layout of the top and bottom capacitive electrode layer designs for the all-around finger embodiment described in the paper
-- For researchers interested in hands-on access to the stretchable cylindrical DexSkin embodiment described in the paper, please contact Baiyu Shi at the Bao Group (`baiyushi@stanford.edu`) regarding sample availability.
+- `DexSkin_Electrode_design.svg`: Layout of top and bottom capacitive electrode layers for the finger design described in the paper
+  - *For researchers interested in access to the stretchable cylindrical DexSkin form described in the paper, please contact Baiyu Shi at the Bao Group (`baiyushi@stanford.edu`) regarding sample availability.*
 
 ### `fpcb/`
 
-- `dexskin_5pin_row_interconnection.zip`
-- `dexskin_12pin_column_interconnection.zip`
-- Gerber-ready flexible PCB files for the polyimide sensor array interconnects
-- Intended for a 5 x 12 taxel layout that can be mounted on flat or cylindrical grippers
-- Square taxels, 2.5 mm x 2.5 mm
-- Taxel spacing: 1.5 mm gap between neighboring taxels
+- `dexskin_5pin_row_interconnection.zip` and `dexskin_12pin_column_interconnection.zip`: Gerber-ready flexible PCB files for the polyimide sensor array interconnects. Design specifications:
+  - Intended for a 5 x 12 taxel layout, mountable on flat or cylindrical grippers
+  - 2.5 mm x 2.5 mm square taxels 
+  - 1.5 mm spacing between neighboring taxels
 
 Layer notes for the flexible PCB fabrication files:
 
