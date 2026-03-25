@@ -1,4 +1,4 @@
-# Hardware
+# Hardware & Assembly Instructions
 
 This folder contains DexSkin hardware assets for fabricating the sensor, ordering the PCBs, and reproducing the calibration setup described in the paper.
 
