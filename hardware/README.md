@@ -26,16 +26,16 @@ In progress (target: mid-April 2026):
 
 ### `fpcb/`
 
-- `dexskin_5pin_row_interconnection.zip` and `dexskin_12pin_column_interconnection.zip`: Gerber-ready flexible PCB files for the polyimide sensor array interconnects. Design specifications:
-  - Intended for a 5 x 12 taxel layout, mountable on flat or cylindrical grippers
+- `dexskin_5pin_row_interconnection.zip` and `dexskin_12pin_column_interconnection.zip`: Gerber-ready flexible PCB files for the polyimide sensor array interconnects. Produces:
+  - 5 x 12 taxel layout, mountable on flat or cylindrical grippers
   - 2.5 mm x 2.5 mm square taxels 
   - 1.5 mm spacing between neighboring taxels
 
-Layer notes for the flexible PCB fabrication files:
-
-- `Mechanical Layer 1`: PCB outline
-- `Top Overlay`: top EMI shielding film outline
-- `Bottom Overlay`: bottom stiffener outline
+  Gerber layers for the PCB fabrication included in the files:
+  
+  - "Mechanical Layer 1": PCB outline
+  - "Top Overlay": top EMI shielding film outline
+  - "Bottom Overlay": bottom stiffener outline
 
 ### `readout_pcb/`
 
