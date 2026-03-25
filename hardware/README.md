@@ -37,19 +37,6 @@ Layer notes for the flexible PCB fabrication files:
 - `Top Overlay`: top EMI shielding film outline
 - `Bottom Overlay`: bottom stiffener outline
 
-Assembly overview:
-
-> Placeholder: [pending FPCB assembly GIF here]
-
-- Materials: two fabricated fPCB pieces, thin double-sided tape, a nonconductive dielectric layer, and a sharp scalpel for trimming the dielectric and tape
-- In our builds, we use a sandpaper-structured midlayer as the dielectric
-- First, apply double-sided tape around the boundary of one fPCB piece
-- Second, laminate the dielectric layer onto the other fPCB piece
-- Finally, manually align the top and bottom electrode layers by matching the exposed copper square taxels, then press around the edges to ensure the double-sided tape bonds the two pieces together securely
-- After assembly, follow [`../firmware/README.md`](../firmware/README.md) and run [`../firmware/scripts/readout.py`](../firmware/scripts/readout.py) together with [`../firmware/scripts/visualize.py`](../firmware/scripts/visualize.py) to verify that the sensor reads out correctly and view the real-time visualization
-
-> Placeholder: [pending FPCB interaction GIF here]
-
 ### `readout_pcb/`
 
 - `dexskin_readout_pcb_v1.1.zip`
@@ -66,6 +53,20 @@ Assembly overview:
 - 3D-printable parts for molding Ecoflex and building airtight calibration chambers
 - Used for the 3-minute transfer calibration procedure described in the paper across sensor instances from different fabrication batches
 
+## Assembly Guide
+Assembly overview:
+
+> Placeholder: [pending FPCB assembly GIF here]
+
+- Materials: two fabricated fPCB pieces, thin double-sided tape, a nonconductive dielectric layer, and a sharp scalpel for trimming the dielectric and tape
+- In our builds, we use a sandpaper-structured midlayer as the dielectric
+- First, apply double-sided tape around the boundary of one fPCB piece
+- Second, laminate the dielectric layer onto the other fPCB piece
+- Finally, manually align the top and bottom electrode layers by matching the exposed copper square taxels, then press around the edges to ensure the double-sided tape bonds the two pieces together securely
+- After assembly, follow [`../firmware/README.md`](../firmware/README.md) and run [`../firmware/scripts/readout.py`](../firmware/scripts/readout.py) together with [`../firmware/scripts/visualize.py`](../firmware/scripts/visualize.py) to verify that the sensor reads out correctly and view the real-time visualization
+
+> Placeholder: [pending FPCB interaction GIF here]
+
 ## Manufacturing Notes
 
 - The ZIP archives in `fpcb/` and `readout_pcb/` are intended for direct submission to a PCB manufacturer.
@@ -77,4 +78,4 @@ Assembly overview:
 - Calibration fixture build notes
 - Step-by-step assembly guidance
 
-Last updated: March 23, 2026
+Last updated: March 25, 2026
