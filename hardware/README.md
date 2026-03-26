@@ -53,7 +53,7 @@ In progress (target: mid-April 2026):
 ## Assembly Guide
 Assembly overview:
 
-![DexSkin Demo](../assets/fab.gif)
+![DexSkin Demo](../assets/fab_short.gif)
 
 For a full walkthrough, please see the [assembly video](https://dex-skin.github.io/open_source.html#assembly-guide) on our project website!
 
@@ -85,7 +85,7 @@ After assembly, verify the sensor by following the firmware instructions provide
 - [`../firmware/scripts/readout.py`](../firmware/scripts/readout.py)
 - [`../firmware/scripts/visualize.py`](../firmware/scripts/visualize.py)
 
-to verify that the sensor reads out correctly and view the real-time visualization
+to verify that the sensor reads out correctly and view the real-time visualization:
 
 ![DexSkin Demo](../assets/interaction.gif)
 
