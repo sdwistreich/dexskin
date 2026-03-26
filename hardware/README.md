@@ -53,7 +53,7 @@ In progress (target: mid-April 2026):
 ## Assembly Guide
 Assembly overview:
 
-> Placeholder: [pending FPCB assembly GIF here]
+![DexSkin Demo](../assets/fab.gif)
 
 For a full walkthrough, please see the [assembly video](https://dex-skin.github.io/open_source.html#assembly-guide) on our project website!
 
@@ -87,7 +87,7 @@ After assembly, verify the sensor by following the firmware instructions provide
 
 to verify that the sensor reads out correctly and view the real-time visualization
 
-> Placeholder: [pending FPCB interaction GIF here]
+![DexSkin Demo](../assets/interaction.gif)
 
 ## Manufacturing Notes
 
