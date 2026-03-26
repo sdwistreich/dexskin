@@ -22,7 +22,7 @@ In progress (target: mid-April 2026):
 ### `finger/`
 
 - `DexSkin_Electrode_design.svg`: Layout of top and bottom capacitive electrode layers for the finger design described in the paper
-  - *For researchers interested in access to the stretchable cylindrical DexSkin form described in the paper, please contact Baiyu Shi at the Bao Group (`baiyushi@stanford.edu`) regarding sample availability.*
+  - *For researchers interested in access to the stretchable cylindrical DexSkin form described in the paper or tactile arrays in other grid formats, please contact Baiyu Shi at the Bao Group (`baiyushi@stanford.edu`) regarding sample availability.*
 
 ### `fpcb/`
 
