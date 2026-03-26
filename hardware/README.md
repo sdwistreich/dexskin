@@ -55,7 +55,7 @@ Assembly overview:
 
 > Placeholder: [pending FPCB assembly GIF here]
 
-For a full walkthrough, please see the assembly video on our project website.
+For a full walkthrough, please see the [assembly video](https://dex-skin.github.io/open_source.html#assembly-guide) on our project website!
 
 **Materials**
 - Two fabricated fPCB pieces
@@ -100,4 +100,4 @@ to verify that the sensor reads out correctly and view the real-time visualizati
 - Calibration fixture build notes
 - Step-by-step assembly guidance
 
-Last updated: March 25, 2026
+Last updated: March 26, 2026
